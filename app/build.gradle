@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.github.jiegec.faceonphoto"
+        minSdkVersion 11
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile group: 'org.bytedeco', name: 'javacv', version: '0.9'
+}
